@@ -12,7 +12,7 @@
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
-        <import location="deiis_types.xml"/>
+        <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/deiis_types.xml"/>
       </imports>
     </typeSystemDescription>
     <fsIndexCollection/>

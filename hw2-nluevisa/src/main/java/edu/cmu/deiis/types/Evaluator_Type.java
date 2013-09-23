@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Evaluator type
- * Updated by JCasGen Mon Sep 23 19:22:42 EDT 2013
+ * Updated by JCasGen Mon Sep 23 19:39:23 EDT 2013
  * @generated */
 public class Evaluator_Type extends Annotation_Type {
   /** @generated */

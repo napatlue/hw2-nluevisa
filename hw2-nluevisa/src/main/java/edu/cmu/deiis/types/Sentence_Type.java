@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** The sentence in the system
- * Updated by JCasGen Mon Sep 23 19:22:43 EDT 2013
+ * Updated by JCasGen Mon Sep 23 19:39:24 EDT 2013
  * @generated */
 public class Sentence_Type extends Annotation_Type {
   /** @generated */
