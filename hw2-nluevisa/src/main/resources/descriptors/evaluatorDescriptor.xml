@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.EvaluatorAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>evaluatorDescriptor</name>
-    <description>Descriptor for EvaluatorAnnotator</description>
+    <description/>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
@@ -15,6 +15,7 @@
         <import location="deiis_types.xml"/>
       </imports>
     </typeSystemDescription>
+    <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
