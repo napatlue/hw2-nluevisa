@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.TokenAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>tokenDescriptor</name>
-    <description/>
+    <description>Descriptor for TokenAnnotator</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

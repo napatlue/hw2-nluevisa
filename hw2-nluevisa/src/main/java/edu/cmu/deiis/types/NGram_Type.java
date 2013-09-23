@@ -12,8 +12,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** 
- * Updated by JCasGen Mon Sep 23 15:48:59 EDT 2013
+/** NGram type that contain Unigram,Bigram and Trigram
+ * Updated by JCasGen Mon Sep 23 19:22:42 EDT 2013
  * @generated */
 public class NGram_Type extends Annotation_Type {
   /** @generated */

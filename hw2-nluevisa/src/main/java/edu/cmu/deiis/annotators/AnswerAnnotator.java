@@ -9,21 +9,16 @@ import org.apache.uima.analysis_engine.annotator.AnnotatorProcessException;
 import org.apache.uima.jcas.JCas;
 
 import edu.cmu.deiis.types.Answer;
-
+/** This class annotated all the answer in document */
 public class AnswerAnnotator extends JCasAnnotator_ImplBase {
  
   private Pattern answerPattern = 
           Pattern.compile("A \\d [^\\n]*\\n");
   
-  public AnswerAnnotator() {
-    // TODO Auto-generated constructor stub
-  }
-
-
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
- // get document text
+    // get document text
     String docText = aJCas.getDocumentText();
     // search for answer pattern
     Matcher matcher = answerPattern.matcher(docText);

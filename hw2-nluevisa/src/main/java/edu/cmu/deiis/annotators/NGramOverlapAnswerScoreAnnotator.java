@@ -7,11 +7,16 @@ import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.NGram;
 import edu.cmu.deiis.types.Question;
 import edu.cmu.deiis.types.Sentence;
-
+/** This is a concrete class inherited from AnswerScoreAnnotator. It 
+ * annotated the answer with score computed by NGramOverlap method 
+ * */
 public class NGramOverlapAnswerScoreAnnotator extends AnswerScoreAnnotator{
 
 
-  @Override
+  
+  /** calculate score using NGram Overlap Method 
+   *  @Override
+   **/
   public double calculateScore(Question question, Answer answer) {
     // TODO Auto-generated method stub
     double score = 0;

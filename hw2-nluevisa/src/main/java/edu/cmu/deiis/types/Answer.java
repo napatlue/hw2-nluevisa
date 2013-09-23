@@ -9,9 +9,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 
-/** 
- * Updated by JCasGen Mon Sep 23 15:48:58 EDT 2013
- * XML source: /Users/napatluevisadpaibul/Documents/workspace/hw2-nluevisa/src/main/resources/descriptors/aeDescriptor.xml
+/** The answer object in the system
+ * Updated by JCasGen Mon Sep 23 19:22:41 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw2-nluevisa-aae.xml
  * @generated */
 public class Answer extends Annotation {
   /** @generated
@@ -64,14 +64,14 @@ public class Answer extends Annotation {
   //*--------------*
   //* Feature: isCorrect
 
-  /** getter for isCorrect - gets 
+  /** getter for isCorrect - gets Boolean indicated wether this is a correct answer or not
    * @generated */
   public boolean getIsCorrect() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
       jcasType.jcas.throwFeatMissing("isCorrect", "edu.cmu.deiis.types.Answer");
     return jcasType.ll_cas.ll_getBooleanValue(addr, ((Answer_Type)jcasType).casFeatCode_isCorrect);}
     
-  /** setter for isCorrect - sets  
+  /** setter for isCorrect - sets Boolean indicated wether this is a correct answer or not 
    * @generated */
   public void setIsCorrect(boolean v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_isCorrect == null)
@@ -82,14 +82,14 @@ public class Answer extends Annotation {
   //*--------------*
   //* Feature: sentence
 
-  /** getter for sentence - gets 
+  /** getter for sentence - gets The text sentence of this answer
    * @generated */
   public Sentence getSentence() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_sentence == null)
       jcasType.jcas.throwFeatMissing("sentence", "edu.cmu.deiis.types.Answer");
     return (Sentence)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Answer_Type)jcasType).casFeatCode_sentence)));}
     
-  /** setter for sentence - sets  
+  /** setter for sentence - sets The text sentence of this answer 
    * @generated */
   public void setSentence(Sentence v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_sentence == null)

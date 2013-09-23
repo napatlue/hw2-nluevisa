@@ -12,7 +12,8 @@ import org.apache.uima.jcas.JCas;
 import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Question;
-
+/** This is an abstract class annotated the answer with score with all the method defined in our pipeline 
+ * */
 public abstract class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
 
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -50,7 +51,17 @@ public abstract class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
 
   }
   
+  /** calculateScore(Question question, Answer answer) is an abstract method to calculate score of answer to the question
+   * 
+   * @param question     Question that we want to answer
+   * @param answer       Answer that we will compute the score
+   * @return      Score of the answer
+   */
   public abstract double calculateScore(Question question, Answer answer);
+  
+  /** getScoreMethodClass() is an abstract method to return the method we use to compute score
+   * @return      Name of the class used to compute this score
+   */
   public abstract String getScoreMethodClass();
 
 

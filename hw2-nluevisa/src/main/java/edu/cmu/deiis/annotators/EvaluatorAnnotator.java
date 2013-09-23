@@ -18,14 +18,15 @@ import org.apache.uima.jcas.JCas;
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Evaluator;
 import edu.cmu.deiis.types.Question;
-
+/** This class annotated the entire document and print the question and ranked score using all evaluation method in the pipeline with precision
+ * of the method to the standard out */
 public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
-    //Map<AnswerScore, Double> scoreMap = new HashMap<AnswerScore, Double>();
-    
+   
+    //Map between method to use and AnswerScore 
     Map<String, Map<AnswerScore, Double>> methodScore = new HashMap<String,Map<AnswerScore, Double>>();
     
     FSIndex questionIndex = aJCas.getAnnotationIndex(Question.type);
@@ -35,7 +36,7 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
       System.out.println("Question: " + question.getCoveredText());
     }
 
-    //
+    //Seperate AnswerScores with different method and put them into the map  
     FSIndex ScoreIndex = aJCas.getAnnotationIndex(AnswerScore.type);
     Iterator ScoreIter = ScoreIndex.iterator();
     while (ScoreIter.hasNext()) {
@@ -55,6 +56,7 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
     }
     int precisionAtN=0;
     
+    //print result to the screen
     Iterator it = methodScore.entrySet().iterator();
     while (it.hasNext()) {
         precisionAtN = 0;
@@ -97,7 +99,6 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
           System.out.println(score.getCoveredText());
         }
         // print precision
-    
         String precision = String.format("%.2f ", (double) correctAnswerCount / (double) precisionAtN);
         System.out.println("Precision at " + precisionAtN + ": " + precision);
         
@@ -109,7 +110,6 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
     annotation.setBegin(0);
     annotation.setEnd(aJCas.getDocumentText().length());
     annotation.setNumCorrectAnswer(precisionAtN);
-    //annotation.setPerformance(Double.parseDouble(precision));
     annotation.setCasProcessorId(this.getClass().toString());
     annotation.setConfidence(1.0f);
     annotation.addToIndexes();

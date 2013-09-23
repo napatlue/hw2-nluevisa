@@ -13,7 +13,7 @@ import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.Question;
 import edu.cmu.deiis.types.Sentence;
 import edu.cmu.deiis.types.Token;
-
+/** This class annotated the sentence in document and associate Sentence with Question and Answer*/
 public class SentenceAnnotator extends JCasAnnotator_ImplBase{
 
 

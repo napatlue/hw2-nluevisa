@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.QuestionAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>QuestionDescriptor</name>
-    <description/>
+    <description>Descriptor for QuestionAnnotator</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

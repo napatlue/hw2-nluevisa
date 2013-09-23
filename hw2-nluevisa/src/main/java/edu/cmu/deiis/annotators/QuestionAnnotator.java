@@ -9,15 +9,12 @@ import org.apache.uima.analysis_engine.annotator.AnnotatorProcessException;
 import org.apache.uima.jcas.JCas;
 
 import edu.cmu.deiis.types.Question;
-
+/** This class annotated the question in document */
 public class QuestionAnnotator extends JCasAnnotator_ImplBase {
  
   private Pattern questionPattern = 
           Pattern.compile("Q [^\\n]*\\n");
   
-  public QuestionAnnotator() {
-    // TODO Auto-generated constructor stub
-  }
 
 
   @Override

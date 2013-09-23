@@ -14,13 +14,10 @@ import edu.cmu.deiis.types.Sentence;
 import edu.cmu.deiis.types.Token;
 
 import java.util.Iterator;
-
+/** This class annotated all the sentences in document and generate Unigram, Bigram and Trigram (all are of NGram type)*/
 public class NGramAnnotator extends JCasAnnotator_ImplBase {
 
   static final int N = 3; //Set to do Unigram,Bigram and Trigram
-  public NGramAnnotator() {
-    // TODO Auto-generated constructor stub
-  }
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
