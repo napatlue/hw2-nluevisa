@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="questionDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/questionDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="answerDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/answerDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="sentenceDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/sentenceDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="tokenDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/tokenDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NGramDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/NGramDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NGramOverlapScoreDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/NGramOverlapScoreDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="tokenOverlapScoreDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/tokenOverlapScoreDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="evaluatorDescriptor">
+      <import location="/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/evaluatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>hw2-nluevisa-aae</name>
+    <description>Aggregate Analysis Engine that process input file to produce ranked score answer to the questions</description>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>questionDescriptor</node>
+        <node>answerDescriptor</node>
+        <node>tokenDescriptor</node>
+        <node>sentenceDescriptor</node>
+        <node>NGramDescriptor</node>
+        <node>NGramOverlapScoreDescriptor</node>
+        <node>tokenOverlapScoreDescriptor</node>
+        <node>evaluatorDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Sentence</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Evaluator</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.SentenceAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>sentenceDescriptor</name>
-    <description/>
+    <description>Descriptor for SentenceAnnotator</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

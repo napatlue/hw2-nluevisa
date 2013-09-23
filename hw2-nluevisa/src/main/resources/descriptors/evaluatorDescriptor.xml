@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.deiis.annotators.EvaluatorAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>evaluatorDescriptor</name>
-    <description/>
+    <description>Descriptor for EvaluatorAnnotator</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
