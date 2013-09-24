@@ -8,9 +8,9 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 
-/** Evaluator type
- * Updated by JCasGen Mon Sep 23 19:39:23 EDT 2013
- * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/sentenceDescriptor.xml
+/** 
+ * Updated by JCasGen Mon Sep 23 19:59:14 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/evaluatorDescriptor.xml
  * @generated */
 public class Evaluator extends Annotation {
   /** @generated
@@ -63,14 +63,14 @@ public class Evaluator extends Annotation {
   //*--------------*
   //* Feature: numCorrectAnswer
 
-  /** getter for numCorrectAnswer - gets number of correct answer in the processing file
+  /** getter for numCorrectAnswer - gets 
    * @generated */
   public int getNumCorrectAnswer() {
     if (Evaluator_Type.featOkTst && ((Evaluator_Type)jcasType).casFeat_numCorrectAnswer == null)
       jcasType.jcas.throwFeatMissing("numCorrectAnswer", "edu.cmu.deiis.types.Evaluator");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Evaluator_Type)jcasType).casFeatCode_numCorrectAnswer);}
     
-  /** setter for numCorrectAnswer - sets number of correct answer in the processing file 
+  /** setter for numCorrectAnswer - sets  
    * @generated */
   public void setNumCorrectAnswer(int v) {
     if (Evaluator_Type.featOkTst && ((Evaluator_Type)jcasType).casFeat_numCorrectAnswer == null)

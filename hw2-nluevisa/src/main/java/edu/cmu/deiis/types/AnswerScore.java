@@ -9,9 +9,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 
-/** The result score of the answer computed from a pipeline
- * Updated by JCasGen Mon Sep 23 19:39:23 EDT 2013
- * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/sentenceDescriptor.xml
+/** 
+ * Updated by JCasGen Mon Sep 23 19:59:14 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/evaluatorDescriptor.xml
  * @generated */
 public class AnswerScore extends Annotation {
   /** @generated
@@ -64,14 +64,14 @@ public class AnswerScore extends Annotation {
   //*--------------*
   //* Feature: score
 
-  /** getter for score - gets The score value of the answer
+  /** getter for score - gets 
    * @generated */
   public double getScore() {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "edu.cmu.deiis.types.AnswerScore");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_score);}
     
-  /** setter for score - sets The score value of the answer 
+  /** setter for score - sets  
    * @generated */
   public void setScore(double v) {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_score == null)
@@ -82,14 +82,14 @@ public class AnswerScore extends Annotation {
   //*--------------*
   //* Feature: answer
 
-  /** getter for answer - gets The answer asscociated with the score
+  /** getter for answer - gets 
    * @generated */
   public Answer getAnswer() {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_answer == null)
       jcasType.jcas.throwFeatMissing("answer", "edu.cmu.deiis.types.AnswerScore");
     return (Answer)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_answer)));}
     
-  /** setter for answer - sets The answer asscociated with the score 
+  /** setter for answer - sets  
    * @generated */
   public void setAnswer(Answer v) {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_answer == null)

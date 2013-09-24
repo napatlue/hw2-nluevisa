@@ -12,8 +12,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** The result score of the answer computed from a pipeline
- * Updated by JCasGen Mon Sep 23 19:39:23 EDT 2013
+/** 
+ * Updated by JCasGen Mon Sep 23 19:59:14 EDT 2013
  * @generated */
 public class AnswerScore_Type extends Annotation_Type {
   /** @generated */
