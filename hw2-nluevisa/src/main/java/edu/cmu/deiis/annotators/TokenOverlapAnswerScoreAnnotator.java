@@ -45,10 +45,5 @@ public class TokenOverlapAnswerScoreAnnotator extends AnswerScoreAnnotator{
     return score;
   }
 
-  @Override
-  public String getScoreMethodClass() {
-    // TODO Auto-generated method stub
-    return this.getClass().toString();
-  }
 
 }

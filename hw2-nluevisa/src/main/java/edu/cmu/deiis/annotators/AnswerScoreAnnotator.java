@@ -59,10 +59,6 @@ public abstract class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
    */
   public abstract double calculateScore(Question question, Answer answer);
   
-  /** getScoreMethodClass() is an abstract method to return the method we use to compute score
-   * @return      Name of the class used to compute this score
-   */
-  public abstract String getScoreMethodClass();
 
 
 }
