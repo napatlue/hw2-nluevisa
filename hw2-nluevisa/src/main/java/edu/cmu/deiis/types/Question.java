@@ -16,8 +16,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 19:59:14 EDT 2013
- * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/evaluatorDescriptor.xml
+ * Updated by JCasGen Fri Oct 04 13:30:22 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/questionDescriptor.xml
  * @generated */
 public class Question extends Annotation {
   /** @generated
@@ -70,14 +70,14 @@ public class Question extends Annotation {
   //*--------------*
   //* Feature: sentence
 
-  /** getter for sentence - gets 
+  /** getter for sentence - gets The text sentence of this question
    * @generated */
   public Sentence getSentence() {
     if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_sentence == null)
       jcasType.jcas.throwFeatMissing("sentence", "edu.cmu.deiis.types.Question");
     return (Sentence)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_sentence)));}
     
-  /** setter for sentence - sets  
+  /** setter for sentence - sets The text sentence of this question 
    * @generated */
   public void setSentence(Sentence v) {
     if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_sentence == null)

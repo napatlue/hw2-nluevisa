@@ -116,13 +116,28 @@
     </typeDescription>
   <typeDescription>
       <name>edu.cmu.deiis.types.Evaluator</name>
-      <description>Evaluator type</description>
+      <description>Hold information of the method used for scoring and result. This type is intended to be used by casConsumer</description>
       <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
       <features>
         <featureDescription>
           <name>numCorrectAnswer</name>
           <description>number of correct answer in the processing file</description>
           <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>resultText</name>
+          <description>output text</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>scoringClassId</name>
+          <description>Id of the class we use for this scoring</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>questionText</name>
+          <description>formatted output text of question that we are processing</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>

@@ -28,12 +28,13 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
    
     //Map between method to use and AnswerScore 
     Map<String, Map<AnswerScore, Double>> methodScore = new HashMap<String,Map<AnswerScore, Double>>();
-    
+    String questionText = "";
     FSIndex questionIndex = aJCas.getAnnotationIndex(Question.type);
     Iterator questionIter = questionIndex.iterator();
     while (questionIter.hasNext()) {
       Question question = (Question) questionIter.next();
-      System.out.println("Question: " + question.getCoveredText());
+      //System.out.println("Question: " + question.getCoveredText());
+      questionText += "Question: " + question.getCoveredText()+"\n";
     }
 
     //Seperate AnswerScores with different method and put them into the map  
@@ -59,10 +60,13 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
     //print result to the screen
     Iterator it = methodScore.entrySet().iterator();
     while (it.hasNext()) {
+      
+        String text = "";
         precisionAtN = 0;
         Map.Entry pairs = (Map.Entry)it.next();
         //System.out.println(pairs.getKey() + " = " + pairs.getValue());
-        System.out.println("\n*** Method: "+ pairs.getKey() + " ***");
+        //System.out.println("\n*** Method: "+ pairs.getKey() + " ***");
+        String scoringClassId = pairs.getKey().toString();
         
         Map<AnswerScore, Double> scoreMap = (Map<AnswerScore, Double>)pairs.getValue();
         
@@ -88,31 +92,43 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
         for (int i = 0; i < scoreList.size(); i++) {
           AnswerScore score = scoreList.get(i).getKey();
           if (score.getAnswer().getIsCorrect()) {
-            System.out.print("+ ");
+            //System.out.print("+ ");
+            text+= "+ ";
+            
             if (i < precisionAtN) {
               correctAnswerCount++;
             }
           } else {
-            System.out.print("- ");
+            //System.out.print("- ");
+            text+="- ";
           }
-          System.out.print(String.format("%.2f ", score.getScore()));
-          System.out.println(score.getCoveredText());
+          //System.out.print(String.format("%.2f ", score.getScore()));
+          text+=String.format("%.2f ", score.getScore());
+          //System.out.println(score.getCoveredText());
+          text+=score.getCoveredText()+"\n";
         }
         // print precision
         String precision = String.format("%.2f ", (double) correctAnswerCount / (double) precisionAtN);
-        System.out.println("Precision at " + precisionAtN + ": " + precision);
-        
+        //System.out.println("Precision at " + precisionAtN + ": " + precision);
+        text+="Precision at " + precisionAtN + ": " + precision+"\n";
         it.remove(); // avoids a ConcurrentModificationException
+        
+        //Add evaluator annotation to CAS
+        Evaluator annotation = new Evaluator(aJCas);
+      
+        annotation.setBegin(0);
+        annotation.setEnd(aJCas.getDocumentText().length());
+        annotation.setQuestionText(questionText);
+        annotation.setScoringClassId(scoringClassId);
+        annotation.setResultText(text);
+        annotation.setNumCorrectAnswer(precisionAtN);
+        annotation.setCasProcessorId(this.getClass().toString());
+        annotation.setConfidence(1.0f);
+        annotation.addToIndexes();
     }
       
 
-    Evaluator annotation = new Evaluator(aJCas);
-    annotation.setBegin(0);
-    annotation.setEnd(aJCas.getDocumentText().length());
-    annotation.setNumCorrectAnswer(precisionAtN);
-    annotation.setCasProcessorId(this.getClass().toString());
-    annotation.setConfidence(1.0f);
-    annotation.addToIndexes();
+    
   }
 
 }

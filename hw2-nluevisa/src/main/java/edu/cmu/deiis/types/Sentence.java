@@ -10,9 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.cas.FSArray;
 
 
-/** 
- * Updated by JCasGen Mon Sep 23 19:59:14 EDT 2013
- * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/evaluatorDescriptor.xml
+/** The sentence in the system
+ * Updated by JCasGen Fri Oct 04 13:30:22 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/questionDescriptor.xml
  * @generated */
 public class Sentence extends Annotation {
   /** @generated
@@ -65,14 +65,14 @@ public class Sentence extends Annotation {
   //*--------------*
   //* Feature: tokenArray
 
-  /** getter for tokenArray - gets 
+  /** getter for tokenArray - gets The array of token in the sentence
    * @generated */
   public FSArray getTokenArray() {
     if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_tokenArray == null)
       jcasType.jcas.throwFeatMissing("tokenArray", "edu.cmu.deiis.types.Sentence");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_tokenArray)));}
     
-  /** setter for tokenArray - sets  
+  /** setter for tokenArray - sets The array of token in the sentence 
    * @generated */
   public void setTokenArray(FSArray v) {
     if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_tokenArray == null)
@@ -99,14 +99,14 @@ public class Sentence extends Annotation {
   //*--------------*
   //* Feature: NGramArray
 
-  /** getter for NGramArray - gets 
+  /** getter for NGramArray - gets NGram generated from the sentence
    * @generated */
   public FSArray getNGramArray() {
     if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_NGramArray == null)
       jcasType.jcas.throwFeatMissing("NGramArray", "edu.cmu.deiis.types.Sentence");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Sentence_Type)jcasType).casFeatCode_NGramArray)));}
     
-  /** setter for NGramArray - sets  
+  /** setter for NGramArray - sets NGram generated from the sentence 
    * @generated */
   public void setNGramArray(FSArray v) {
     if (Sentence_Type.featOkTst && ((Sentence_Type)jcasType).casFeat_NGramArray == null)

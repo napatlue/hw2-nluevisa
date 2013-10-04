@@ -12,8 +12,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** 
- * Updated by JCasGen Mon Sep 23 19:59:14 EDT 2013
+/** Hold information of the method used for scoring and result. This type is intended to be used by casConsumer
+ * Updated by JCasGen Fri Oct 04 13:30:21 EDT 2013
  * @generated */
 public class Evaluator_Type extends Annotation_Type {
   /** @generated */
@@ -60,6 +60,60 @@ public class Evaluator_Type extends Annotation_Type {
     ll_cas.ll_setIntValue(addr, casFeatCode_numCorrectAnswer, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_resultText;
+  /** @generated */
+  final int     casFeatCode_resultText;
+  /** @generated */ 
+  public String getResultText(int addr) {
+        if (featOkTst && casFeat_resultText == null)
+      jcas.throwFeatMissing("resultText", "edu.cmu.deiis.types.Evaluator");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_resultText);
+  }
+  /** @generated */    
+  public void setResultText(int addr, String v) {
+        if (featOkTst && casFeat_resultText == null)
+      jcas.throwFeatMissing("resultText", "edu.cmu.deiis.types.Evaluator");
+    ll_cas.ll_setStringValue(addr, casFeatCode_resultText, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_scoringClassId;
+  /** @generated */
+  final int     casFeatCode_scoringClassId;
+  /** @generated */ 
+  public String getScoringClassId(int addr) {
+        if (featOkTst && casFeat_scoringClassId == null)
+      jcas.throwFeatMissing("scoringClassId", "edu.cmu.deiis.types.Evaluator");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_scoringClassId);
+  }
+  /** @generated */    
+  public void setScoringClassId(int addr, String v) {
+        if (featOkTst && casFeat_scoringClassId == null)
+      jcas.throwFeatMissing("scoringClassId", "edu.cmu.deiis.types.Evaluator");
+    ll_cas.ll_setStringValue(addr, casFeatCode_scoringClassId, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_questionText;
+  /** @generated */
+  final int     casFeatCode_questionText;
+  /** @generated */ 
+  public String getQuestionText(int addr) {
+        if (featOkTst && casFeat_questionText == null)
+      jcas.throwFeatMissing("questionText", "edu.cmu.deiis.types.Evaluator");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_questionText);
+  }
+  /** @generated */    
+  public void setQuestionText(int addr, String v) {
+        if (featOkTst && casFeat_questionText == null)
+      jcas.throwFeatMissing("questionText", "edu.cmu.deiis.types.Evaluator");
+    ll_cas.ll_setStringValue(addr, casFeatCode_questionText, v);}
+    
+  
 
 
 
@@ -72,6 +126,18 @@ public class Evaluator_Type extends Annotation_Type {
  
     casFeat_numCorrectAnswer = jcas.getRequiredFeatureDE(casType, "numCorrectAnswer", "uima.cas.Integer", featOkTst);
     casFeatCode_numCorrectAnswer  = (null == casFeat_numCorrectAnswer) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_numCorrectAnswer).getCode();
+
+ 
+    casFeat_resultText = jcas.getRequiredFeatureDE(casType, "resultText", "uima.cas.String", featOkTst);
+    casFeatCode_resultText  = (null == casFeat_resultText) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_resultText).getCode();
+
+ 
+    casFeat_scoringClassId = jcas.getRequiredFeatureDE(casType, "scoringClassId", "uima.cas.String", featOkTst);
+    casFeatCode_scoringClassId  = (null == casFeat_scoringClassId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_scoringClassId).getCode();
+
+ 
+    casFeat_questionText = jcas.getRequiredFeatureDE(casType, "questionText", "uima.cas.String", featOkTst);
+    casFeatCode_questionText  = (null == casFeat_questionText) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_questionText).getCode();
 
   }
 }

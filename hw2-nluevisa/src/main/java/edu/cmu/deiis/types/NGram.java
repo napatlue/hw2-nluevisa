@@ -10,9 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.cas.FSArray;
 
 
-/** 
- * Updated by JCasGen Mon Sep 23 19:59:14 EDT 2013
- * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/evaluatorDescriptor.xml
+/** NGram type that contain Unigram,Bigram and Trigram
+ * Updated by JCasGen Fri Oct 04 13:30:21 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/questionDescriptor.xml
  * @generated */
 public class NGram extends Annotation {
   /** @generated
@@ -65,14 +65,14 @@ public class NGram extends Annotation {
   //*--------------*
   //* Feature: elements
 
-  /** getter for elements - gets 
+  /** getter for elements - gets The element to store array of string
    * @generated */
   public FSArray getElements() {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
       jcasType.jcas.throwFeatMissing("elements", "edu.cmu.deiis.types.NGram");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements)));}
     
-  /** setter for elements - sets  
+  /** setter for elements - sets The element to store array of string 
    * @generated */
   public void setElements(FSArray v) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elements == null)
@@ -99,14 +99,14 @@ public class NGram extends Annotation {
   //*--------------*
   //* Feature: elementType
 
-  /** getter for elementType - gets 
+  /** getter for elementType - gets The type of an element
    * @generated */
   public String getElementType() {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elementType == null)
       jcasType.jcas.throwFeatMissing("elementType", "edu.cmu.deiis.types.NGram");
     return jcasType.ll_cas.ll_getStringValue(addr, ((NGram_Type)jcasType).casFeatCode_elementType);}
     
-  /** setter for elementType - sets  
+  /** setter for elementType - sets The type of an element 
    * @generated */
   public void setElementType(String v) {
     if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_elementType == null)
