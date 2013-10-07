@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Hold information of the method used for scoring and result. This type is intended to be used by casConsumer
- * Updated by JCasGen Mon Oct 07 00:44:49 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:26 EDT 2013
  * @generated */
 public class Evaluator_Type extends Annotation_Type {
   /** @generated */
@@ -114,6 +114,24 @@ public class Evaluator_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_questionText, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_precision;
+  /** @generated */
+  final int     casFeatCode_precision;
+  /** @generated */ 
+  public double getPrecision(int addr) {
+        if (featOkTst && casFeat_precision == null)
+      jcas.throwFeatMissing("precision", "edu.cmu.deiis.types.Evaluator");
+    return ll_cas.ll_getDoubleValue(addr, casFeatCode_precision);
+  }
+  /** @generated */    
+  public void setPrecision(int addr, double v) {
+        if (featOkTst && casFeat_precision == null)
+      jcas.throwFeatMissing("precision", "edu.cmu.deiis.types.Evaluator");
+    ll_cas.ll_setDoubleValue(addr, casFeatCode_precision, v);}
+    
+  
 
 
 
@@ -138,6 +156,10 @@ public class Evaluator_Type extends Annotation_Type {
  
     casFeat_questionText = jcas.getRequiredFeatureDE(casType, "questionText", "uima.cas.String", featOkTst);
     casFeatCode_questionText  = (null == casFeat_questionText) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_questionText).getCode();
+
+ 
+    casFeat_precision = jcas.getRequiredFeatureDE(casType, "precision", "uima.cas.Double", featOkTst);
+    casFeatCode_precision  = (null == casFeat_precision) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_precision).getCode();
 
   }
 }

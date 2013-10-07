@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.cleartk.score.type.ScoredAnnotation_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:44:54 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:28 EDT 2013
  * @generated */
 public class DependencyNode_Type extends ScoredAnnotation_Type {
   /** @generated */
@@ -67,7 +67,7 @@ public class DependencyNode_Type extends ScoredAnnotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_HeadRelations), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_HeadRelations), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_HeadRelations), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_HeadRelations), i);
   }
    
   /** @generated */ 
@@ -104,7 +104,7 @@ public class DependencyNode_Type extends ScoredAnnotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_ChildRelations), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_ChildRelations), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_ChildRelations), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_ChildRelations), i);
   }
    
   /** @generated */ 

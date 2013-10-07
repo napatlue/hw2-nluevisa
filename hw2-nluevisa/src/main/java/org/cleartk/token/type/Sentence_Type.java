@@ -12,7 +12,7 @@ import org.apache.uima.cas.Type;
 import org.cleartk.score.type.ScoredAnnotation_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:44:57 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:28 EDT 2013
  * @generated */
 public class Sentence_Type extends ScoredAnnotation_Type {
   /** @generated */

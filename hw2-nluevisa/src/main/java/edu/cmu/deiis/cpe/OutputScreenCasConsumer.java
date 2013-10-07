@@ -1,10 +1,16 @@
 package edu.cmu.deiis.cpe;
 
+import org.apache.uima.util.ProcessTrace;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
@@ -20,24 +26,22 @@ import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Evaluator;
 
 public class OutputScreenCasConsumer  extends CasConsumer_ImplBase {
-  /**
-   * Name of configuration parameter that must be set to the path of a directory into which the
-   * output files will be written.
-   */
-  public static final String PARAM_OUTPUTDIR = "OutputDirectory";
 
+  private int casCount;
+
+  private Map<String, Double> averagePrecisionMap;
 
   public void initialize() throws ResourceInitializationException {
-   
-  
+    averagePrecisionMap = new HashMap<String, Double>();
+    casCount = 0;
   }
 
   /**
-   * Processes the CasContainer which was populated by the TextAnalysisEngines. <br>
-   * In this case, the CAS is converted to XML and written into the output file .
+   * Processes the CasContainer which was populated by by analysis engine. <br>
+   * In this case,it populates result gather from evaluator to output screen .
    * 
    * @param aCAS
-   *          CasContainer which has been populated by the TAEs
+   *          CasContainer which has been populated by my analysis engine
    * 
    * @throws ResourceProcessException
    *           if there is an error in processing the Resource
@@ -45,7 +49,9 @@ public class OutputScreenCasConsumer  extends CasConsumer_ImplBase {
    * @see org.apache.uima.collection.base_cpm.CasObjectProcessor#processCas(org.apache.uima.cas.CAS)
    */
   public void processCas(CAS aCAS) throws ResourceProcessException {
- 
+    //Map to store average precision of each method
+    
+    
     JCas jcas;
     try {
       jcas = aCAS.getJCas();
@@ -63,11 +69,42 @@ public class OutputScreenCasConsumer  extends CasConsumer_ImplBase {
         continue;
       }
       System.out.println(eval.getQuestionText());
-      System.out.println("Class producing score: "+ eval.getScoringClassId());
+      
+      String id = eval.getScoringClassId();
+      System.out.println("Class producing score: "+ id);
       System.out.println("Result: \n"+eval.getResultText());
+      casCount++;
+      if(averagePrecisionMap.containsKey(id))
+      {
+        double sumPrecision = averagePrecisionMap.get(id) + eval.getPrecision();
+        averagePrecisionMap.put(id, sumPrecision);
+      }
+      else
+      {
+        averagePrecisionMap.put(id, eval.getPrecision());
+      }
       
     }
-   
+
+  }
+ 
+  /**
+   * Upon completion of collecting all CAS objects, outputs the average precision for all scoring method
+   * to the screen.
+   */
+  @Override
+  public void collectionProcessComplete(ProcessTrace arg0) {
+    int numQuestion = casCount/averagePrecisionMap.size();
+    System.out.println("*********************************************************");
+    Iterator<Entry<String, Double>> it = averagePrecisionMap.entrySet().iterator();
+    while (it.hasNext()) {
+      
+        Map.Entry pairs = (Map.Entry)it.next();
+        double averagePrec = (Double)pairs.getValue() / numQuestion;
+       // double roundedPrec = Math.round(averagePrec * 100D) / 100D;
+        System.out.println("Average Precision for  "+ pairs.getKey()+ " :" + String.format("%.2f ", averagePrec));
+    }
+    
   }
 
 }

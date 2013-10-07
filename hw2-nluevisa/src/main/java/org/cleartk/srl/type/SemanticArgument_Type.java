@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:44:53 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:27 EDT 2013
  * @generated */
 public class SemanticArgument_Type extends Argument_Type {
   /** @generated */
@@ -102,7 +102,7 @@ public class SemanticArgument_Type extends Argument_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_coreferenceAnnotations), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_coreferenceAnnotations), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_coreferenceAnnotations), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_coreferenceAnnotations), i);
   }
    
   /** @generated */ 

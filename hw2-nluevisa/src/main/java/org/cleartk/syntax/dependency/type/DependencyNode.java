@@ -12,7 +12,7 @@ import org.cleartk.score.type.ScoredAnnotation;
 
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:44:54 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:28 EDT 2013
  * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw3-nluevisa-aae.xml
  * @generated */
 public class DependencyNode extends ScoredAnnotation {

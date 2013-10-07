@@ -25,7 +25,9 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
-   
+    
+
+    
     //Map between method to use and AnswerScore 
     Map<String, Map<AnswerScore, Double>> methodScore = new HashMap<String,Map<AnswerScore, Double>>();
     String questionText = "";
@@ -35,6 +37,7 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
       Question question = (Question) questionIter.next();
       //System.out.println("Question: " + question.getCoveredText());
       questionText += "Question: " + question.getCoveredText()+"\n";
+      
     }
 
     //Seperate AnswerScores with different method and put them into the map  
@@ -123,6 +126,7 @@ public class EvaluatorAnnotator  extends JCasAnnotator_ImplBase{
         annotation.setResultText(text);
         annotation.setNumCorrectAnswer(precisionAtN);
         annotation.setCasProcessorId(this.getClass().toString());
+        annotation.setPrecision(Double.parseDouble(precision));
         annotation.setConfidence(1.0f);
         annotation.addToIndexes();
     }

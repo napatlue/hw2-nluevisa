@@ -9,7 +9,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Hold information of the method used for scoring and result. This type is intended to be used by casConsumer
- * Updated by JCasGen Mon Oct 07 00:44:49 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:26 EDT 2013
  * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw3-nluevisa-aae.xml
  * @generated */
 public class Evaluator extends Annotation {
@@ -130,6 +130,24 @@ public class Evaluator extends Annotation {
     if (Evaluator_Type.featOkTst && ((Evaluator_Type)jcasType).casFeat_questionText == null)
       jcasType.jcas.throwFeatMissing("questionText", "edu.cmu.deiis.types.Evaluator");
     jcasType.ll_cas.ll_setStringValue(addr, ((Evaluator_Type)jcasType).casFeatCode_questionText, v);}    
+   
+    
+  //*--------------*
+  //* Feature: precision
+
+  /** getter for precision - gets Precision value at Top N for this scoring method
+   * @generated */
+  public double getPrecision() {
+    if (Evaluator_Type.featOkTst && ((Evaluator_Type)jcasType).casFeat_precision == null)
+      jcasType.jcas.throwFeatMissing("precision", "edu.cmu.deiis.types.Evaluator");
+    return jcasType.ll_cas.ll_getDoubleValue(addr, ((Evaluator_Type)jcasType).casFeatCode_precision);}
+    
+  /** setter for precision - sets Precision value at Top N for this scoring method 
+   * @generated */
+  public void setPrecision(double v) {
+    if (Evaluator_Type.featOkTst && ((Evaluator_Type)jcasType).casFeat_precision == null)
+      jcasType.jcas.throwFeatMissing("precision", "edu.cmu.deiis.types.Evaluator");
+    jcasType.ll_cas.ll_setDoubleValue(addr, ((Evaluator_Type)jcasType).casFeatCode_precision, v);}    
   }
 
     

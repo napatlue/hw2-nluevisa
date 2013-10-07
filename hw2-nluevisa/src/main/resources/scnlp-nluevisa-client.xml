@@ -1,5 +1,3 @@
-
-<!-- This is a client descriptor for using stanford core nlp service . -->
 <?xml version="1.0" encoding="UTF-8"?>
 <customResourceSpecifier xmlns="http://uima.apache.org/resourceSpecifier">
 	<resourceClassName>
@@ -8,7 +6,5 @@
 	<parameters>
 		<parameter name="brokerURL" value="tcp://mu.lti.cs.cmu.edu:61616" />
 		<parameter name="endpoint" value="ScnlpQueue" />
-		<parameter name="timeout" value="50000" />
-		<parameter name="getmetatimeout" value="50000" />
 	</parameters>
 </customResourceSpecifier>

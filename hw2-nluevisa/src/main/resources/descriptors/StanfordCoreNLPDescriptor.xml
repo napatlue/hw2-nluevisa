@@ -5,7 +5,7 @@
   <primitive>true</primitive>  <annotatorImplementationName>org.cleartk.stanford.StanfordCoreNLPAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>StanfordCoreNLPDescriptor</name>
-    <description>Descriptor for the ClearTK StanfordCoreNLPAnnotator. It is used to produce NameEntityMention annotation which will be then used for calculating answer score using Name Entity Overlap Method</description>
+    <description>Descriptor for the ClearTK StanfordCoreNLPAnnotator for local built. It is used to produce NameEntityMention annotation which will be then used for calculating answer score using Name Entity Overlap Method</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>

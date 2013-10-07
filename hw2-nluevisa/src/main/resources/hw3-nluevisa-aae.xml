@@ -29,11 +29,12 @@
       <import name="descriptors.tokenOverlapScoreDescriptor"/>
     </delegateAnalysisEngine>
 
-  <delegateAnalysisEngine key="scnlp-nluevisa-client">
-      <import name="scnlp-nluevisa-client"/>
-    </delegateAnalysisEngine>
+
     <delegateAnalysisEngine key="NamedEntityScoreDescriptor">
       <import name="descriptors.NamedEntityScoreDescriptor"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="scnlp-nluevisa-client">
+      <import name="scnlp-nluevisa-client"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
@@ -45,6 +46,7 @@
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
+  
         <node>scnlp-nluevisa-client</node>
         <node>questionDescriptor</node>
         <node>answerDescriptor</node>
@@ -52,9 +54,9 @@
         <node>sentenceDescriptor</node>
         <node>NGramDescriptor</node>
         <node>NGramOverlapScoreDescriptor</node>
-        <node>tokenOverlapScoreDescriptor</node>
-      <node>NamedEntityScoreDescriptor</node>
-        <node>evaluatorDescriptor</node>
+      <node>tokenOverlapScoreDescriptor</node>
+        <node>NamedEntityScoreDescriptor</node>
+      <node>evaluatorDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>

@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Base annotation for this system
- * Updated by JCasGen Mon Oct 07 00:44:48 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:26 EDT 2013
  * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw3-nluevisa-aae.xml
  * @generated */
 public class Annotation extends org.apache.uima.jcas.tcas.Annotation {

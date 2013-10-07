@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.cleartk.score.type.ScoredTOP_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:44:51 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:27 EDT 2013
  * @generated */
 public class NamedEntity_Type extends ScoredTOP_Type {
   /** @generated */
@@ -139,7 +139,7 @@ public class NamedEntity_Type extends ScoredTOP_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_mentions), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_mentions), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_mentions), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_mentions), i);
   }
    
   /** @generated */ 

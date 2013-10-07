@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.cleartk.score.type.ScoredAnnotation_Type;
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:44:51 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:27 EDT 2013
  * @generated */
 public class Chunk_Type extends ScoredAnnotation_Type {
   /** @generated */

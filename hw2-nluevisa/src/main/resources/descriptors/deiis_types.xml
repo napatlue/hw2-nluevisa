@@ -139,6 +139,11 @@
           <description>formatted output text of question that we are processing</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
+      <featureDescription>
+          <name>precision</name>
+          <description>Precision value at Top N for this scoring method</description>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
   </types>

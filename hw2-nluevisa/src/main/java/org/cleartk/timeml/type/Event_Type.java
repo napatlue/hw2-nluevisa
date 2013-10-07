@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Mon Oct 07 00:44:56 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:32:28 EDT 2013
  * @generated */
 public class Event_Type extends Anchor_Type {
   /** @generated */
