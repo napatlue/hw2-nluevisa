@@ -36,9 +36,6 @@
   <delegateAnalysisEngine key="scnlp-nluevisa-client">
       <import name="scnlp-nluevisa-client"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="StanfordCoreNLPDescriptor">
-      <import name="descriptors.StanfordCoreNLPDescriptor"/>
-    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>hw3-nluevisa-aae</name>
@@ -50,17 +47,16 @@
     <flowConstraints>
       <fixedFlow>
   
-        <node>StanfordCoreNLPDescriptor</node>
         <node>scnlp-nluevisa-client</node>
         <node>questionDescriptor</node>
         <node>answerDescriptor</node>
         <node>tokenDescriptor</node>
         <node>sentenceDescriptor</node>
         <node>NGramDescriptor</node>
-      <node>NGramOverlapScoreDescriptor</node>
-        <node>tokenOverlapScoreDescriptor</node>
-      <node>NamedEntityScoreDescriptor</node>
-        <node>evaluatorDescriptor</node>
+        <node>NGramOverlapScoreDescriptor</node>
+      <node>tokenOverlapScoreDescriptor</node>
+        <node>NamedEntityScoreDescriptor</node>
+      <node>evaluatorDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>
