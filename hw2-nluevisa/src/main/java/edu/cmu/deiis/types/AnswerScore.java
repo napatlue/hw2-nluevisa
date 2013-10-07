@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** The result score of the answer computed from a pipeline
- * Updated by JCasGen Fri Oct 04 13:30:21 EDT 2013
- * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/questionDescriptor.xml
+ * Updated by JCasGen Mon Oct 07 00:44:48 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw3-nluevisa-aae.xml
  * @generated */
 public class AnswerScore extends Annotation {
   /** @generated

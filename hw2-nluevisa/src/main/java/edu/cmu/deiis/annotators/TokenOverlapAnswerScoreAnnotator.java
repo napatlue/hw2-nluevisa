@@ -1,5 +1,6 @@
 package edu.cmu.deiis.annotators;
 
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 
 import edu.cmu.deiis.types.Answer;
@@ -18,7 +19,7 @@ public class TokenOverlapAnswerScoreAnnotator extends AnswerScoreAnnotator{
   /** calculate score using Token Overlap Method 
    *  @Override
    **/
-  public double calculateScore(Question question, Answer answer) {
+  public double calculateScore(Question question, Answer answer, JCas aJCas) {
     // TODO Auto-generated method stub
     double score = 0;
     Sentence questionSentence = question.getSentence();

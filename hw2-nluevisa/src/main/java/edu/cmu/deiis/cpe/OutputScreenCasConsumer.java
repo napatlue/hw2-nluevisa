@@ -26,13 +26,9 @@ public class OutputScreenCasConsumer  extends CasConsumer_ImplBase {
    */
   public static final String PARAM_OUTPUTDIR = "OutputDirectory";
 
-  private File mOutputDir;
-
-
-  private int mDocNum;
 
   public void initialize() throws ResourceInitializationException {
-    mDocNum = 0;
+   
   
   }
 
@@ -62,38 +58,16 @@ public class OutputScreenCasConsumer  extends CasConsumer_ImplBase {
     while(it.hasNext())
     {
       Evaluator eval = (Evaluator) it.next();
+      if(eval.getCasProcessorId() == null)
+      {
+        continue;
+      }
       System.out.println(eval.getQuestionText());
       System.out.println("Class producing score: "+ eval.getScoringClassId());
       System.out.println("Result: \n"+eval.getResultText());
       
     }
-    // retrieve the filename of the input file from the CAS
-//    FSIterator it = jcas.getAnnotationIndex(SourceDocumentInformation.type).iterator();
-//    File outFile = null;
-//    if (it.hasNext()) {
-//      SourceDocumentInformation fileLoc = (SourceDocumentInformation) it.next();
-//      File inFile;
-//      try {
-//        inFile = new File(new URL(fileLoc.getUri()).getPath());
-//        outFile = new File(mOutputDir, inFile.getName());
-//      } catch (MalformedURLException e1) {
-//        // invalid URL, use default processing below
-//      }
-//    }
-//    if (outFile == null) {
-//      outFile = new File(mOutputDir, "doc" + mDocNum++);
-//    }
-//    // convert CAS to xml format and write to output file in UTF-8
-//    try {
-//      String xmlAnnotations = cas2xml.generateXML(aCAS);
-//      FileOutputStream outStream = new FileOutputStream(outFile);
-//      outStream.write(xmlAnnotations.getBytes("UTF-8"));
-//      outStream.close();
-//    } catch (CASException e) {
-//      throw new ResourceProcessException(e);
-//    } catch (IOException e) {
-//      throw new ResourceProcessException(e);
-//    }
+   
   }
 
 }

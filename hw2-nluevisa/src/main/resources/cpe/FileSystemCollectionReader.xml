@@ -75,7 +75,7 @@
 		    <nameValuePair>
 		        <name>InputDirectory</name>
 		        <value>
-		            <string>C:/Program Files/apache-uima/examples/data</string>
+		            <string>/Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/inputData</string>
 		        </value>
 		    </nameValuePair>
             <nameValuePair>

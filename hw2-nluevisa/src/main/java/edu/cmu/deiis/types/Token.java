@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Fri Oct 04 13:30:22 EDT 2013
- * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/descriptors/questionDescriptor.xml
+ * Updated by JCasGen Mon Oct 07 00:44:50 EDT 2013
+ * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw3-nluevisa-aae.xml
  * @generated */
 public class Token extends Annotation {
   /** @generated

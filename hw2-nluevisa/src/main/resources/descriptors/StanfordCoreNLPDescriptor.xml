@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>  <annotatorImplementationName>org.cleartk.stanford.StanfordCoreNLPAnnotator</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>StanfordCoreNLPDescriptor</name>
+    <description>Descriptor for the ClearTK StanfordCoreNLPAnnotator. It is used to produce NameEntityMention annotation which will be then used for calculating answer score using Name Entity Overlap Method</description>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import name="org.cleartk.TypeSystem"/>
+      <import name="org.apache.uima.examples.SourceDocumentInformation"/>
+      </imports>
+    </typeSystemDescription>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">org.cleartk.syntax.constituent.type.TreebankNode</type>
+          <type allAnnotatorFeatures="true">org.cleartk.syntax.dependency.type.TopDependencyNode</type>
+          <type allAnnotatorFeatures="true">org.cleartk.token.type.Token</type>
+          <type allAnnotatorFeatures="true">org.cleartk.token.type.Sentence</type>
+          <type allAnnotatorFeatures="true">org.cleartk.ne.type.NamedEntityMention</type>
+          <type allAnnotatorFeatures="true">org.cleartk.syntax.dependency.type.DependencyNode</type>
+        <type allAnnotatorFeatures="true">org.apache.uima.examples.SourceDocumentInformation</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

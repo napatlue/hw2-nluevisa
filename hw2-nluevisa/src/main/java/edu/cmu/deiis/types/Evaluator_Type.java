@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Hold information of the method used for scoring and result. This type is intended to be used by casConsumer
- * Updated by JCasGen Fri Oct 04 13:30:21 EDT 2013
+ * Updated by JCasGen Mon Oct 07 00:44:49 EDT 2013
  * @generated */
 public class Evaluator_Type extends Annotation_Type {
   /** @generated */

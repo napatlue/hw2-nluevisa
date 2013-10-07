@@ -39,7 +39,7 @@ public abstract class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
           annotation.setGoldStandard(0);
         }
         */
-        double score = calculateScore(question, answer);
+        double score = calculateScore(question, answer, aJCas);
         
         //annotation.setScore(getNGramOverlap(question, answer));
         annotation.setScore(score);
@@ -57,7 +57,7 @@ public abstract class AnswerScoreAnnotator extends JCasAnnotator_ImplBase {
    * @param answer       Answer that we will compute the score
    * @return      Score of the answer
    */
-  public abstract double calculateScore(Question question, Answer answer);
+  public abstract double calculateScore(Question question, Answer answer, JCas aJCas);
   
 
 
