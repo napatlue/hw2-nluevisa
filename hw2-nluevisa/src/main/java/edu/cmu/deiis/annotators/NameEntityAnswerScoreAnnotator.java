@@ -43,12 +43,10 @@ public class NameEntityAnswerScoreAnnotator extends  AnswerScoreAnnotator {
   }
 
   /**
-   * Get all NamedEntityMentions for an annotation span as a String set.
+   * Get all NamedEntityMentions for an annotation span as a set of String.
    * 
-   * @param annotation
-   *          Input Annotation span
-   * @param tokens
-   *          AnnotationIndex for the tokens
+   * @param Input Annotation span
+   * @param  AnnotationIndex for the tokens
    * @return Set of token String
    */
   private Set<String> getTokensForAnnotationSpan(Annotation annotation,
