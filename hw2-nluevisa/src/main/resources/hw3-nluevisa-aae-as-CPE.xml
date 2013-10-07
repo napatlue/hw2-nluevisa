@@ -16,9 +16,9 @@
         </collectionIterator>
     </collectionReader>
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
-        <casProcessor deployment="integrated" name="hw2-nluevisa-aae">
+        <casProcessor deployment="integrated" name="hw3-nluevisa-aae">
             <descriptor>
-                <import location="hw2-nluevisa-aae.xml"/>
+                <import location="hw3-nluevisa-aae.xml"/>
             </descriptor>
             <deploymentParameters/>
             <errorHandling>

@@ -31,7 +31,7 @@
     <service>
       <inputQueue endpoint="HW2AAEQueue" brokerURL="tcp://localhost:61616"/>
       <topDescriptor>
-       <import location="./hw2-nluevisa-aae.xml"/> 
+       <import location="./hw3-nluevisa-aae.xml"/> 
       </topDescriptor>
     </service>
   </deployment>
