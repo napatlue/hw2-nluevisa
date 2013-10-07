@@ -13,7 +13,7 @@ import org.apache.uima.jcas.cas.StringArray;
 
 
 /** 
- * Updated by JCasGen Mon Oct 07 02:32:28 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:34:07 EDT 2013
  * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw3-nluevisa-aae.xml
  * @generated */
 public class TreebankNode extends ScoredAnnotation {

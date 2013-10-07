@@ -9,7 +9,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** Hold information of the method used for scoring and result. This type is intended to be used by casConsumer
- * Updated by JCasGen Mon Oct 07 02:32:26 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:34:05 EDT 2013
  * XML source: /Users/napatluevisadpaibul/git/hw2-nluevisa/hw2-nluevisa/src/main/resources/hw3-nluevisa-aae.xml
  * @generated */
 public class Evaluator extends Annotation {

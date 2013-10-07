@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** 
- * Updated by JCasGen Mon Oct 07 02:32:28 EDT 2013
+ * Updated by JCasGen Mon Oct 07 02:34:07 EDT 2013
  * @generated */
 public class DocumentCreationTime_Type extends Time_Type {
   /** @generated */
